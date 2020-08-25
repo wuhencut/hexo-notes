@@ -1,11 +1,3 @@
----
-title: hexo知识点
-date: 2018-02-22 14:31:22
-description: 笔记 知识点
-categories: 笔记
-tags:
----
-
 #### hexo知识点
 上面插图操作证明md语法已经优化了，能完美兼容img标签了
 ```

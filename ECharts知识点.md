@@ -1,11 +1,3 @@
----
-title: ECharts知识点
-date: 2018-02-28 23:11:43
-description: Echarts知识点，笔记
-categories: 笔记
-tags:
----
-
 #### echarts样式设置
  itemStyle   naomal：正常显示
   <img src="./images/image83.png"/>

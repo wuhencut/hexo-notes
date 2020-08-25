@@ -1,11 +1,3 @@
----
-title: stone's first own blog
-date: 2016-08-01 10:26:39
-description: 我第一篇blog遇到的问题
-categories: 技术日志
-tags:
-- z-index
----
 ## 我第一篇blog遇到的问题
 ### markdown语法基本规范:
 [规范](http://www.coderli.com/write-readme-for-your-project/)

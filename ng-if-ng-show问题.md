@@ -1,11 +1,3 @@
----
-title: ng-if ng-show问题
-date: 2016-08-15 16:30:48
-description: ng-if ng-click在开发中引出的问题
-tags:
-- 指令
----
-
 ## ng-if 和 ng-show
 ng-show:
 > 指令在表达式为 true 时显示指定的 HTML 元素，否则隐藏指定的 HTML 元素。

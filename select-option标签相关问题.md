@@ -1,11 +1,3 @@
----
-title: select/option标签相关问题
-date: 2018-03-08 17:43:27
-description: 原生标签无法绑定click事件
-categories:
-tags:
----
-
 ### select/option无法监听点击事件
 #### ng-model
 > ng-model是指下拉表单的默认显示。

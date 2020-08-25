@@ -1,11 +1,3 @@
----
-title: ES6知识点
-date: 2018-02-22 14:31:12
-description: 笔记 知识点
-categories: 笔记
-tags:
----
-
 #### let与var的区别
 <img src="./images/letVSvar-1.png"/>
 <img src="./images/letVSvar-2.png"/>

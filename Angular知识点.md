@@ -1,11 +1,3 @@
----
-title: Angular知识点
-date: 2018-02-22 14:32:14
-description: 笔记 知识点
-categories: 笔记
-tags:
----
-
 #### 指令模板：template，回调函数：link.在link中可执行请求，请求的服务写在最外层，看图
 <img src="./images/image19.png"/>
 #### angular自带的9种过滤器

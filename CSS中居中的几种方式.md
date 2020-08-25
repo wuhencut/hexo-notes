@@ -1,11 +1,3 @@
----
-title: CSS中居中的几种方式
-date: 2018-02-23 15:36:17
-description: CSS中居中的几种方式
-categories: CSS
-tags:
----
-
 ## 水平居中
 #### 1、margin: 0 auto;
 关于这个，大家也不陌生做网页让其居中用的比较多,
