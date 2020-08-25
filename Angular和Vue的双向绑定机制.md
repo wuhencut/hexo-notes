@@ -1,11 +1,3 @@
----
-title: Angular和Vue的双向绑定机制
-date: 2018-03-06 16:32:40
-description: 双向绑定原理
-categories:
-tags:
----
-
 ### Angular双向绑定
 #### 1、什么是双向数据绑定
 双向数据绑定：
