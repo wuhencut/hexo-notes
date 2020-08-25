@@ -3,7 +3,7 @@
 双向数据绑定：
 Angular实现了双向绑定机制。所谓的双向绑定，无非是从界面的操作能实时反映到数据，数据的变更能实时展现到界面。即数据模型（Module）和视图（View）之间的双向绑定。
 例子：
-```ruby
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,7 +52,7 @@ Angular实现了双向绑定机制。所谓的双向绑定，无非是从界面�
 如果会正常增加，说明原因。
 如果不会，说明原因并修改代码使其可以正常显示。
 <img src="./images/ng-2-bind-4.png"/>
-```ruby
+```javascript
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,7 +123,7 @@ $digest函数的工作过程：
   本文所有相关代码均在github上面可找到 https://github.com/DMQ/mvvm
 
 相信大家对mvvm双向绑定应该都不陌生了，一言不合上代码，下面先看一个本文最终实现的效果吧，和vue一样的语法
-```ruby
+```javascript
 <div id="mvvm-app">
     <input type="text" v-model="word">
     <p>{{word}}</p>
@@ -188,7 +188,7 @@ ok, 思路已经整理完毕，也已经比较明确相关逻辑和模块功能�
 我们知道可以利用Obeject.defineProperty()来监听属性变动
 那么将需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上 setter和getter
 这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化。。相关代码可以是这样：
-```ruby
+```javascript
 var data = {name: 'stone'};
 observe(data);
 data.name('rivers');
@@ -221,7 +221,7 @@ function defineReactive(data, key, val){
 
 这样我们已经可以监听每个数据的变化了，那么监听到变化之后就是怎么通知订阅者了，所以接下来我们需要实现一个消息订阅器，很简单，维护一个数组，用来收集订阅者，数据变动触发notify，再调用订阅者的update方法，代码改善之后是这样：
 
-```ruby
+```javascript
 // ... 省略
 function defineReactive(data, key, val) {
     var dep = new Dep();
@@ -255,7 +255,7 @@ Dep.prototype = {
 
 那么问题来了，谁是订阅者？怎么往订阅器添加订阅者？
 没错，上面的思路整理中我们已经明确订阅者应该是Watcher, 而且var dep = new Dep();是在 defineReactive方法内部定义的，所以想通过dep添加订阅者，就必须要在闭包内操作，所以我们可以在 getter里面动手脚：
-```ruby
+```javascript
 // Observer.js
 // ...省略
 Object.defineProperty(data, key, {
@@ -282,7 +282,7 @@ Watcher.prototype = {
 compile主要做的事情是解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图，如图所示：
 <img src="./images/v-2-bind-3.png"/>
 因为遍历解析的过程有多次操作dom节点，为提高性能和效率，会先将跟节点el转换成文档碎片fragment进行解析编译操作，解析完成，再将fragment添加回原来的真实dom节点中
-```ruby
+```javascript
 function Compile(el) {
     this.$el = this.isElementNode(el) ? el : document.querySelector(el);
     if (this.$el) {
@@ -305,7 +305,7 @@ Compile.prototype = {
 ```
 
 compileElement方法将遍历所有节点及其子节点，进行扫描解析编译，调用对应的指令渲染函数进行数据渲染，并调用对应的指令更新函数进行绑定，详看代码及注释说明：
-```ruby
+```javascript
 Compile.prototype = {
     // ... 省略
     compileElement: function(el) {

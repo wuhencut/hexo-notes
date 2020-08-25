@@ -132,7 +132,7 @@ https://www.zhihu.com/question/31442029
 <img src="./images/image29.png"/>
 
 #### meta - viewport
-```ruby
+```javascript
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 1.width=device-width    //应用程序的宽度和屏幕的宽度是一样的
 2.height=device-height  //应用程序的高度和屏幕的高是一样的
@@ -176,7 +176,7 @@ chrome = 1   强制 IE 使用 Chrome Frame 渲染   -----<meta http-equiv="X-UA-
 <img src="./images/image30.png"/>
 
 #### 对象遍历
-```ruby
+```javascript
  for(var key in obj){}
 ```
 
@@ -238,20 +238,20 @@ chrome = 1   强制 IE 使用 Chrome Frame 渲染   -----<meta http-equiv="X-UA-
 http://www.cnblogs.com/wuyanliang/p/5862643.html
 
 #### 怎么判断一个object为空
-```ruby
+```javascript
 if(typeof(x) == "undefined") / if(typeof(x) != "object")  / if(!x)
 ```
 
 #### 如何返回数组中元素的索引
 普通：arr.indexOf(x)
 二分法：只能适用于有序数组，
-```ruby
+```javascript
 arr，num，midIndex. if(arr[midIndex] > num){midIndex-- ,if(arr[midIndex] == num){return midIndex}else{midIdex++,if(arr[midIndex] == num){return midIndex}
 ```
 
 #### js原型继承的几种方式
 1. 原型链继承
-```ruby
+```javascript
 function show(){
 	this.name = 'lee';
 }
@@ -266,7 +266,7 @@ alert(run1.name);//lee
 ```
 2，构造函数继承（对象冒充继承）//call,apply
 为了解决引用共享和超类型无法传参的问题，我们采用一种叫借用构造函数的技术，或者成为**对象冒充**（伪造对象，经典继承）的技术来解决两种问题
-```ruby
+```javascript
 function box(age){
 	this.name = ['stone', 'one', 'jack'];
 	this.age = age;
@@ -284,7 +284,7 @@ alert(desk1.name);//'stone', 'one', 'jack', 'rivers'
 ```
 3，组合继承（原型链继承+构造函数继承）
 借用构造函数虽然解决了刚才两种问题，但没有原型，复用则无从谈起。所以，我们需要原型链+借用构造函数的模式，这种模式为组合继承
-```ruby
+```javascript
 function box(age){
 	this.name = ['stone', 'one', 'rivers'];
 	this.age = age;
@@ -303,7 +303,7 @@ var desk1 = new desk(200);
 alert(desk1.run());
 ```
 4，原型式继承
-```ruby
+```javascript
 function obj(o){//传递一个字面量函数
 	function F(){}//创造一个构造函数
 	F.prototype = o;//把字面量函数赋值给构造函数的原型
@@ -329,7 +329,7 @@ alert(box2.arr);//'爸爸','妈妈','哥哥'
 5, 寄生组合式继承
 寄生组合式继承解决了两次调用的问题，组合式继承就会有两次调用的情况
 基本模型如下
-```ruby
+```javascript
 function obj(o){
 	function F(){};
 	F.prototype = o;
@@ -436,7 +436,7 @@ window.scrollX
  elem.offsetHeight
 
 #### 如何实现页面到底自动刷新：
-```ruby
+```javascript
 if ((2 * H + T) > eH) {
             t.dataLoadFinish = false;
             t.getNewsList(t.page, t.lastTime);
@@ -450,7 +450,7 @@ if ((2 * H + T) > eH) {
 > elem.scrollTop
 
 #### 如何用js获取各种高度宽度
-```ruby
+```javascript
 网页可见区域宽： document.body.clientWidth
 网页可见区域高： document.body.clientHeight
 网页可见区域宽： document.body.offsetWidth (包括边线的宽)
@@ -673,7 +673,7 @@ if ((2 * H + T) > eH) {
   <img src="./images/image98.png"/>
 
 #### 文本溢出用...替代
-```ruby
+```javascript
  text-overflow:ellipsis;
 ```
 

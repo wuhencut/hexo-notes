@@ -94,13 +94,13 @@ v-on:click="donsonthing"  -> @click="dosonthing"      v-bind:href="url"  ->  :hr
 > 在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。尽管我们可以在 methods 中轻松实现这点，但更好的方式是：methods 只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。
 
   点击事件将只会触发一次
-  ```ruby
+  ```javascript
   <a v-on:click.once="doThis"></a>
   ```
 <img src="./images/image37.png"/>
 
 #### is属性
-```ruby
+```javascript
 元素 <ul>，<ol>，<table>，<select> 限制了能被它包裹的元素，而一些像 <option> 这样的元素只能出现在某些其它元素内部
 ```
 <img src="./images/image38.png"/>
@@ -140,7 +140,7 @@ https://github.com/wuhencut/vue-clb
 
 #### 组件中的data必须是函数
 当同一个模块内用多次用到同一个组件的时候，而且每个组件要单独控制的时候，data不能放在全局。单独放在component中
-```ruby
+```javascript
 data:function (){
     return {
         count : 0
@@ -262,7 +262,7 @@ data:function (){
 > webpack将项目依赖的第三方压缩成一个独立的包，并用hash值跟踪，当有内容变动的时候才会更新。
 
 #### vue的跨域
-```ruby
+```javascript
 在config/index.js中修改proxyTable：
  dev: {
     env: require('./dev.env'),
@@ -298,23 +298,23 @@ proxyTable: {
 ##### 1、删除.map文件
 > 项目比较大的时候：1、这些文件非常大 2、编译时间非常长  删除：congfig/index中将productionSourceMap: false即可  再打包
 ##### 2、http-server
-```ruby
+```javascript
 注意：构建完成的包必须在http服务下才能跑起来，全局安装 npm install http-server -g
 报错：-4048 无法完成安装  解决： 用管理员身份运行。  右键"开始" -- 命令提示符即可
 ```
 ##### 3、在dist中开启http服务
-```ruby
+```javascript
 cd  dist --- http-server -p 3000 随便定义端口号，不冲突即可
 ```
 ##### 4、当大型项目不在dist根目录
-```ruby
+```javascript
 config/index.js --- assetPublicPath:'/dist/' --- npm run build
 
 assetsPublicPath："/"的时候npm run dev，这时候可以运行，在dist文件中http-server -p 3000 开启http服务，assetsPublicPath修改为:"/dist/" --- npm run biuld 此时可在localhost:9090和localhost:9090/dist#/中运行
 ```
 
 #### 怎么在Vue中引入jquery
-```ruby
+```javascript
 因为已经安装了vue脚手架，所以需要在webpack中全局引入jquery
 package.json --- dependencies { "jquery":"^2.2.3" } --- cnpm install --- 在webpack.base.js文件中加一行代码 ：  var webpack=require("webpack")
 --- 在module.exports的最后加：
@@ -354,7 +354,7 @@ https://segmentfault.com/q/1010000008863946
   --- cnpm install less less-loader --save
 
 #### vue跳转页面
-```ruby
+```javascript
 router.push(/,,,) -- > this.$router.push({path:'/index'})
 ```
 
@@ -387,7 +387,7 @@ router.push(/,,,) -- > this.$router.push({path:'/index'})
 > rt
 
 #### 动态引入图片
-```ruby
+```javascript
 <img v-bind:src="imges/banner10.jpg"/>
 ```
 #### 如何使用a标签的href

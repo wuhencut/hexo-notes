@@ -28,12 +28,12 @@ ng-bind="{'0':'GO','1':'完成','2':'已领'}[item.status]  期货1.1acPacket页
 > 当goURL页面本身带参数，而且该页面需要登录。页面数据又根据?的参数来获取，会导致?goURL=***?***、第二个?后重要的参数会被抹去不见。解决：1、goURL跳转登录的时候自己写清楚，2、ctrl里写清楚，当参数不穿的时候默认是什么值。
 
 #### ng-repeat遍历如何在子列表中展示数据
-```ruby
+```javascript
 ng-repeat="item in items",     exm : <ul ng-repeat="item in items"><li>{{item.data}}</li></ul>  其中的item可用this代替，因为this指向item(双向绑定)
 ```
 
 #### 原生js导致操作不受$scope控制
-```ruby
+```javascript
 由于弹窗的组件都是由原生js写的，会导致操作跳出$scope作用域，操作不收控制
 解决:将操作绑定回$scope,
 $scope.$apply(function(){

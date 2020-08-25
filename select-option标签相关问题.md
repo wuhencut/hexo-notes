@@ -37,7 +37,7 @@ tags:
 所以，根据他的用法，我又尝试了一遍，发现！！mmp，select as label for value in array 用这个其实也是只能显示一个
 
 这是代码：
-```ruby
+```javascript
 //处理止盈线列表                 止盈线列表  占用点买金
     function processHighMoneyList(list, totalMoney){
         var highMoneyList = [];//这个用来处理遍历的列表
@@ -57,14 +57,14 @@ tags:
     var schemeStrategyQuitGain = 0;
 ```
 点击事件：
-```ruby
+```javascript
 //选择止盈
     $scope.chooseHigh = function (rote){
         schemeStrategyQuitGain = X.toInt((rote - 0) / 100 * $scope.totalStockMoney);
     };
 ```
 页面代码:
-```ruby
+```javascript
                   //绑定的默认值作为index指向他的值                               index       value                                          事件              双向绑定的变量
 <select ng-model="defaultRatio" class="txt-orange rote-select" ng-options="item.rote as item.money for item in highMoneyList" ng-change="chooseHigh(defaultRatio)"></select>
 ```

@@ -42,7 +42,7 @@ showTypeDialog = false
 后续解决的话就补上
 
 ### 反转状态时，若只是修改true / false,则不需使用三目
-```ruby
+```javascript
 $scope.showTypeDialog = !$scope.showTypeDialog;
 ```
 

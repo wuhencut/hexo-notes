@@ -20,11 +20,11 @@
 
 ### axios
 #### 引入axios
-```ruby
+```javascript
 npm install axios --save
 ```
 在组件中引入axios
-```ruby
+```javascript
 import axios from 'axios'
 ```
 axios的then方法中如果使用function，this为undefined，不知道为啥，用箭头函数，this指向外部vue实例相当于用function函数在外面声明了let t = this;
@@ -32,7 +32,7 @@ axios的then方法中如果使用function，this为undefined，不知道为啥�
 
 ### 数组filter
 > 可根据条件删选元素成为新的数组
-```ruby
+```javascript
 let arr = this.tableData.filter(o => o.goodsId == goods.goodsId);
 arr[0].count++;
 
@@ -41,12 +41,12 @@ this.tableData = this.tableData.filter(o => o.goodsId != goods.goodsId) // 可�
 
 ### Element组件的$message方法
 > 可直接在方法中使用
-```ruby
+```javascript
 this.$meaasge.success('.....');
 this.$message.error('....');
 ```
 也可以这样
-```ruby
+```javascript
 this.$message({
 message: '结账成功，感谢你的购买！',
 type: 'success'

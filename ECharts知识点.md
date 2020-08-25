@@ -16,7 +16,7 @@ tags:
 > 横坐标      纵坐标
 
 #### loading动画
-```ruby
+```javascript
 myChart.showLoading() -- myChart.hideLoading()
 ```
 

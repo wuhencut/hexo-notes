@@ -61,7 +61,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 > content
 ```
 ### 代码块高亮：ruby
-```ruby
+```javascript
   def add(a, b)
     return a + b
   end
